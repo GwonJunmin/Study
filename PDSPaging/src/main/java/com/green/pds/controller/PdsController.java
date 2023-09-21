@@ -55,6 +55,7 @@ public class PdsController {
 		//--------------------------------------
 		// 페이징 정보 준비
 		int           nowpage   =  Integer.parseInt( (String) map.get("nowpage") ); 
+		// 한페이지에 보여줄 자료수(ROWS)
 		int           pagecount =  2;    // 한페이지 당 출력할 줄(row)수  - 2
 
 		// sql 사용할 변수 : 조회할 레코드 번호
@@ -63,8 +64,8 @@ public class PdsController {
 
 		map.put("nowpage",   nowpage );
 		map.put("pagecount", pagecount );
-		map.put("startnum",  startnum );
-		map.put("endnum",    endnum );		
+		map.put("startnum",  startnum ); // 조회할 자료의 시작번호
+		map.put("endnum",    endnum ); // 조회할 자료의 끝번호		
 		//----------------------------------------
 				
 		
